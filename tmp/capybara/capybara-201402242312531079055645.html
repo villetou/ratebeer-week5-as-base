@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>Ratebeer</title>
+  <link rel="stylesheet" media="all" href="/assets/application.css" data-turbolinks-track="true" />
+  <script src="/assets/application.js" data-turbolinks-track="true"></script>
+  
+</head>
+<body>
+
+<div class="navibar">
+  <a href="/breweries">breweries</a>
+  <a href="/beers">beers</a>
+  <a href="/styles">styles</a>
+  <a href="/ratings">ratings</a>
+  <a href="/users">users</a>
+  <a href="/beer_clubs">clubs</a>
+  <a href="/places">places</a>
+  |
+    <a href="/signin">signin</a>
+    <a href="/signup">signup</a>
+</div>
+
+<h1>Sign in</h1>
+
+<p id="notice">you should be signed in</p>
+
+<form method="post" action="/sessions" accept-charset="UTF-8"><div style="margin:0;padding:0;display:inline"><input type="hidden" value="✓" name="utf8" /></div>
+    username <input type="text" name="username" id="username" />
+    password <input type="password" name="password" id="password" />
+    <input type="submit" value="Log in" name="commit" />
+</form>
+
+
+
+</body></html>

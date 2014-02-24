@@ -8,6 +8,14 @@ class BeersController < ApplicationController
   # GET /beers.json
   def index
     @beers = Beer.all
+  
+    order = params[:order] || 'name'
+
+    case order
+      when 'name' then @beers.sort_by!{ |b| b.name }
+      when 'brewery' then @beers.sort_by!{ |b| b.brewery.name }
+      when 'style' then @beers.sort_by!{ |b| b.style.name }
+    end
   end
 
   # GET /beers/1
@@ -24,6 +32,9 @@ class BeersController < ApplicationController
 
   # GET /beers/1/edit
   def edit
+  end
+
+  def list
   end
 
   # POST /beers
@@ -80,5 +91,8 @@ class BeersController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def beer_params
       params.require(:beer).permit(:name, :style_id, :brewery_id)
+    end
+
+    def nglist
     end
 end

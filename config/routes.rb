@@ -24,4 +24,9 @@ Ratebeer::Application.routes.draw do
 
   root 'breweries#index'
 
+  get 'beerlist', to:'beers#list'
+  get 'ngbeerlist', to:'beers#nglist'
+
+  get 'brewerylist', to:'breweries#nglist'
+
 end

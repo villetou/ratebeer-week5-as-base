@@ -12,6 +12,8 @@ group :production do
    gem 'rails_12factor' 
 end
 
+gem 'jquery-turbolinks'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -55,6 +57,8 @@ group :test do
   gem 'launchy'
   gem 'webmock'
   gem 'simplecov', require: false
+  gem 'selenium-webdriver'
+  gem 'database_cleaner', '< 1.1.0'
 end
 
 gem 'httparty'
